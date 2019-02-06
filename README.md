@@ -54,7 +54,7 @@ HTML page requirements :
 - The page should simulate the buy action.
 
 
-the image included as a [sketch](snacks-machine.png) describes  the genral guid line for the page and does not mean that we want it to look exactly like that.
+the image included as a [sketch](snacks-machine.png) describes  the general guide line for the page and does not mean that we want it to look exactly like that.
 
 
 ## Part 3 - Required
@@ -65,6 +65,6 @@ Please answer the following questions with no more than 2-3 lines
 
 2- Explain 3 different CSS selectors.
 
-3- What is the difference between SessionStorage and LocalStorage in HTML5?
+3- What is the difference between `SessionStorage` and `LocalStorage` in HTML5?
 
   
