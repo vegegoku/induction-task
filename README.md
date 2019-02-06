@@ -62,7 +62,9 @@ the image included as a [sketch](snacks-machine.png) describes  the genral guid 
 Please answer the following questions with no more than 2-3 lines
 
 1- What are Mutation Observers in JavaScript?
+
 2- Explain 3 different CSS selectors.
+
 3- What is the difference between SessionStorage and LocalStorage in HTML5?
 
   
