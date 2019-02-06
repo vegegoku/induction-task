@@ -54,7 +54,7 @@ HTML page requirements :
 - The page should simulate the buy action.
 
 
-the image included as a [sketch](snack-machine.png) describes  the genral guid line for the page and does not mean that we want it to look exactly like that.
+the image included as a [sketch](snacks-machine.png) describes  the genral guid line for the page and does not mean that we want it to look exactly like that.
 
 
 ## Part 3 - Required
