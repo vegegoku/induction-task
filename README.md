@@ -1,2 +1,36 @@
-# induction-task
-Induction 2019 task
+## Induction assignment description
+
+### The Snacks machine
+
+Progressoft wants to deploy a new snacks machine inside its premises, the new snacks machine needs to be programmed 
+before it can operate and starts serving the employees some delightful snacks.
+
+The process to buy a snack involves the following steps:
+
+1- The snacks machine will be started with a set of snacks and will have 0 money inside it.
+
+2- The employee will have to insert money in the machine in order to buy a snack, the employee can insert one money unit at a time, the supported units are 
+Quarter JD, Half JD, 1 JD, 5 JDs and 10 JDs.  
+
+3- When the employee inserts money he can then pick 1 snack to be dropped from the snacks machine.
+
+4- The machine should only drop the snack if the money inserted is equal or more than the price of the picked snack.
+
+5- The machine should return the change to the employee.
+
+Fortunately the machine specs were programmed as Units test written in java. and our job now is to implement the actual code that can run the machine.
+
+We have 2 tasks we need to accomplish to make the code execute :
+
+- The current code in the tests does not compile yet, so our first task is to make the code compile successfully.
+- We need to implement the the code that makes all the unit tests pass.
+
+ 
+### Project structure
+ 
+ The project is a maven project, you can start working on the project by importing it into your favorite IDE. 
+ you can run the tests using the IDE or from the command line use `mvn clean test`.
+  
+ 
+ > Changing the Unit tests code is not allowed.
+  
