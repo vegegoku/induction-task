@@ -1,5 +1,6 @@
 package com.progressoft.induction;
 
+import org.assertj.core.api.ThrowableAssert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -44,14 +45,22 @@ public class SnackMachineTest {
     @ParameterizedTest(name = "Insert non predefined money {arguments} is not accepted")
     @ValueSource(doubles = {0.0, 0.01, 0.05, 0.10, 20.0, 50.0})
     void snack_machine_does_not_accept_non_predefined_money_units(double amount) {
-        assertThatThrownBy(() -> snackMachine.insertMoney(new Money(BigDecimal.valueOf(amount))))
-                .isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                snackMachine.insertMoney(new Money(BigDecimal.valueOf(amount)));
+            }
+        }).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
     void insert_null_money_should_fail() {
-        assertThatThrownBy(() -> snackMachine.insertMoney(null))
-                .isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                snackMachine.insertMoney(null);
+            }
+        }).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
@@ -63,8 +72,12 @@ public class SnackMachineTest {
 
     @Test
     void buy_without_inserting_money_should_fail() {
-        assertThatThrownBy(() -> snackMachine.buySnack(SnackType.CHEWING_GUM))
-                .isInstanceOf(IllegalStateException.class);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                snackMachine.buySnack(SnackType.CHEWING_GUM);
+            }
+        }).isInstanceOf(IllegalStateException.class);
     }
 
     @Test
@@ -109,11 +122,14 @@ public class SnackMachineTest {
             snackMachine.buySnack(SnackType.CHEWING_GUM);
         }
 
-        assertThatThrownBy(() -> {
-            snackMachine.insertMoney(Money.QUARTER_DINAR);
-            snackMachine.insertMoney(Money.QUARTER_DINAR);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                snackMachine.insertMoney(Money.QUARTER_DINAR);
+                snackMachine.insertMoney(Money.QUARTER_DINAR);
 
-            snackMachine.buySnack(SnackType.CHEWING_GUM);
+                snackMachine.buySnack(SnackType.CHEWING_GUM);
+            }
         }).isInstanceOf(IllegalStateException.class);
     }
 
@@ -121,8 +137,12 @@ public class SnackMachineTest {
     void buying_a_snack_after_inserting_money_less_than_snack_price_should_fail() {
         snackMachine.insertMoney(Money.QUARTER_DINAR);
 
-        assertThatThrownBy(() -> snackMachine.buySnack(SnackType.CHEWING_GUM))
-                .isInstanceOf(IllegalStateException.class);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                snackMachine.buySnack(SnackType.CHEWING_GUM);
+            }
+        }).isInstanceOf(IllegalStateException.class);
     }
 
     @Test

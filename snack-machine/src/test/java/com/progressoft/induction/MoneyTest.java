@@ -1,5 +1,6 @@
 package com.progressoft.induction;
 
+import org.assertj.core.api.ThrowableAssert;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -69,7 +70,11 @@ public class MoneyTest {
         Money oneDinar = new Money(BigDecimal.valueOf(1));
         Money halfDinar = new Money(BigDecimal.valueOf(0.5));
 
-        assertThatThrownBy(() -> halfDinar.subtract(oneDinar))
-                .isInstanceOf(IllegalArgumentException.class);
+        assertThatThrownBy(new ThrowableAssert.ThrowingCallable() {
+            @Override
+            public void call() throws Throwable {
+                halfDinar.subtract(oneDinar);
+            }
+        }).isInstanceOf(IllegalArgumentException.class);
     }
 }
