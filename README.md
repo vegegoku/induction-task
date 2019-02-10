@@ -36,9 +36,20 @@ We have 2 tasks we need to accomplish to make the code execute :
  
  > Changing the Unit tests code is not allowed.
 
-## Part 2 - Optional
+## Part 2 - Required
 
- ### Snack machine UI :
+Please answer the following questions with no more than 2-3 lines
+
+1- What are Mutation Observers in JavaScript?
+
+2- Explain 3 different CSS selectors.
+
+3- What is the difference between `SessionStorage` and `LocalStorage` in HTML5?
+
+
+## Part 3 - Optional
+
+### Snack machine UI :
 
  > We would like to have a simple UI implmented for the snack machine, this part of the assignment is considered optional but will be a plus for considering the candidate for the position.
 
@@ -56,15 +67,3 @@ HTML page requirements :
 
 the image included as a [sketch](snacks-machine.png) describes  the general guide line for the page and does not mean that we want it to look exactly like that.
 
-
-## Part 3 - Required
-
-Please answer the following questions with no more than 2-3 lines
-
-1- What are Mutation Observers in JavaScript?
-
-2- Explain 3 different CSS selectors.
-
-3- What is the difference between `SessionStorage` and `LocalStorage` in HTML5?
-
-  
